@@ -91,11 +91,13 @@ $log = "url.txt";
 $data ="";
 $curl = curl_init();
 curl_setopt_array($curl, array(
+curl_setopt_array($curl, array(
    CURLOPT_PORT => "443",
   CURLOPT_URL => "$log",
   CURLOPT_RETURNTRANSFER => false,
+  CURLOPT_ENCODING => "",
   CURLOPT_SSL_VERIFYPEER => false,
-  CURLOPT_TIMEOUT => 3,
+  CURLOPT_TIMEOUT => 6,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "GET",
   CURLOPT_POSTFIELDS => $data,
