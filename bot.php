@@ -36,6 +36,47 @@ WARNING:[31m USE AT YOUR OWN RISK - IF YOU WANT TO STOP SCRIPT - goto ur phone 
 [32m
 ";
 
+try:
+    f = open("auth.txt", "r")
+    auth = f.read()
+    f.close 
+except:
+    wr = str(input("\033[1;0;40mPaste Your Auth here :- "))
+    f = open("auth.txt", "w")
+    f.write(wr)
+    f.close
+    f = open("auth.txt", "r")
+    auth = f.read()
+    f.close
+
+try:
+    f = open("url.txt", "r")
+    f = open("url.txt", "r")
+    url1 = f.read()
+    f.close
+except:
+    wr = str(input("Paste Your URL here :- "))
+    f = open("url.txt", "w")
+    f.write(wr)
+    f.close
+    f = open("url.txt", "r")
+    url1 = f.read()
+    f.close
+
+try:
+    f = open("ua.txt", "r")
+    f = open("ua.txt", "r")
+    url1 = f.read()
+    f.close
+except:
+    wr = str(input("Paste Your User Agent here :- "))
+    f = open("ua.txt", "w")
+    f.write(wr)
+    f.close
+    f = open("ua.txt", "r")
+    ua = f.read()
+    f.close
+
 echo $green."Login";
 $ar=0;$is=5;while($ar<$is){
 sleep(1);
@@ -58,7 +99,7 @@ curl_setopt_array($curl, array(
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "GET",
   CURLOPT_POSTFIELDS => $data,
-  CURLOPT_HTTPHEADER => array("Authorization:auth.txt","User-Agent:ua.txt","Connection:Keep-Alive","Accept-Encoding:gzip","Content-Length:0",
+  CURLOPT_HTTPHEADER => array("Authorization:"auth.txt"","User-Agent:"ua.txt"","Connection:Keep-Alive","Accept-Encoding:gzip","Content-Length:0",
 
     )
 
