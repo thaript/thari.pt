@@ -46,7 +46,7 @@ sleep(6);
 echo $green."success"."\n\n";
 
 while (true){
-$log = "xxxxxxxxxxxxxxxxx1";
+$log = "url.txt";
 $data ="";
 $curl = curl_init();
 curl_setopt_array($curl, array(
@@ -58,7 +58,7 @@ curl_setopt_array($curl, array(
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "GET",
   CURLOPT_POSTFIELDS => $data,
-  CURLOPT_HTTPHEADER => array("Authorization:xxxxxxxxx2","User-Agent:xxxxxxxxxxx3","Connection:Keep-Alive","Accept-Encoding:gzip","Content-Length:0",
+  CURLOPT_HTTPHEADER => array("Authorization:auth.txt","User-Agent:ua.txt","Connection:Keep-Alive","Accept-Encoding:gzip","Content-Length:0",
 
     )
 
