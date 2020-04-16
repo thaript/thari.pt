@@ -36,6 +36,10 @@ WARNING:[31m USE AT YOUR OWN RISK - IF YOU WANT TO STOP SCRIPT - goto ur phone 
 [32m
 ";
 
+"""
+print(name, "")
+
+
 try:
     f = open("auth.txt", "r")
     auth = f.read()
@@ -77,6 +81,21 @@ except:
     ua = f.read()
     f.close
 
+try:
+    import requests
+
+
+except ImportError:
+    print('%s Requests isn\'t installed, installing now.')
+    os.system('pip3 install requests')
+    print('%s Requests has been installed.')
+    os.system('clear')
+    import requests
+
+def main():
+    os.system("clear")
+    print(name,"\n")
+    s = int(input("\033[1;0;40mEnter Amount - "))
 echo $green."Login";
 $ar=0;$is=5;while($ar<$is){
 sleep(1);
